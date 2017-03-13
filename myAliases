@@ -40,7 +40,7 @@ alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
 
 
 ## shortcuts to edit specific dotfiles
-alias allc='v -p ~/.vimrc ~/dotfiles/myBashProfile ~/.bash_profile ~/dotfiles/myAliases ~/.vim/mySnips/jareds-coffee.snippets ~/.inputrc'  # -p directs to open each file in a tab
+alias allc='v -p ~/.vimrc ~/dotfiles/myBashProfile ~/.bash_profile ~/dotfiles/myAliases ~/.inputrc'  # -p directs to open each file in a tab
 alias vimrc='v ~/.vimrc'
 alias myBashProfile='mvim ~/dotfiles/myBashProfile'
 alias myAliases='mvim ~/dotfiles/myAliases'
@@ -67,7 +67,6 @@ alias py='python'
 alias js='javascript'
 alias cs='coffee'
 alias red='redis-cli'  # redis has to be in the path
-alias pybs='python'  # TODO: has to be a way to prep with a file - points to bootstrap file (can put things like import redis in it)
 
 
 ##  git
@@ -87,15 +86,10 @@ alias gitcon='more .git/dotfiles'
 alias gitmerge='git pull origin master'
 alias gitlone='git log --pretty=oneline'
 # TODO: commands below need variable added to function
-alias gitsetgit='git remote add origin git@github.com:JaredVogt/'  # TODO: this is what you want 'git remote add origin git@github.com:JaredVogt/smsfun.git' - github
-alias gitsetbit='echo not set up yet'  #  TODO: git remote add origin https://jaredvogt@bitbucket.org/jaredvogt/MultipleAPI.git' - bitbucket
 
 
 ##  source commands
 alias sbp='source ~/.bash_profile'  # reload alias file'  # this is the key one!
-alias spb='echo sbp idiot!!!!'
-alias bpr='echo "dope, you want sbp - which sources ~/.bash_profile"'  # reload bash profile
-alias resource='ar bpr'
 
 
 ## random
