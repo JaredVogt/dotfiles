@@ -1,0 +1,108 @@
+shopt -s expand_aliases  # expand aliases in non-ineractive shells
+########################################################
+# These aliases should work on any platform
+########################################################
+
+# search for subpart in alias file
+# ga () { /usr/bin/grep -i -a1 $@ $CONFIGDIR/my_aliases_core | grep -v '^\s*$' ; }  # both of these are not really necesary - easy enough to alias | grep
+# gan () { /usr/bin/grep -i -a1 $@ $CONFIGDIR/my_aliases_mac_custom | grep -v '^\s*$' ; }
+# TODO: the advantage of preceeding commands is that the comments will be shown for documentation purposes
+
+
+##  generic aliases
+alias h=history
+# alias ns='bash --init-file $HOME/.bash_profile_ns'  # FIXME: this file doesn't even exist
+alias cdl='cd --'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ll='ls -l'
+alias more="less -N"
+#alias cd=cdd
+alias lla='ls -halFG'
+alias llat='ls -halFt'
+alias llar='ls -alhFR | more'
+alias lsd='ls -alhF | grep "^d"'  # get directories only
+alias xx='chmod +x'
+alias lsdr='ls -alhFR | grep "^d" | more'  # get directories only TODO: this is kind of borked
+alias k9='kill -9'
+alias qf='sudo find / -name'
+alias qf2='locate'
+alias hg="history | grep"
+alias ag="alias | grep"
+alias rmr='rm -iR'
+# alias vim='/usr/local/bin/vim -u ~/.vimrc'
+alias v='mvim -u ~/.vimrc'
+alias vim='echo "did you mean mvim?";read -rsp $"Press any key to continue..." -n1 key;vim'
+alias vt='mvim -u ~/.vimrc --remote-tab'  # http://apple.stackexchange.com/questions/105603/mvim-macvim-7-4-opening-new-windows-rather-than-tabs-mac-os-x-10-8-5
+alias vs='mvim -S'
+alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
+
+
+## shortcuts to edit specific dotfiles
+alias allc='v -p ~/.vimrc ~/dotfiles/myBashProfile ~/.bash_profile ~/dotfiles/myAliases ~/.vim/mySnips/jareds-coffee.snippets ~/.inputrc'  # -p directs to open each file in a tab
+alias vimrc='v ~/.vimrc'
+alias myBashProfile='mvim ~/dotfiles/myBashProfile'
+alias myAliases='mvim ~/dotfiles/myAliases'
+alias myFunctions='mvim ~/dotfiles/myFunctions'
+# TODO: this should be a function that pops up a list of files to edit - could be triggered with the command dot
+
+
+##  Screen
+alias ss='screen -S'
+alias scr='screen -r'
+alias sls='screen -ls'
+alias sss='screen -dmS'  # this will launch a new screen in the background - enter a name for the screen instance and the program to run
+
+
+##  Directory
+alias up='cd .. && lla'
+alias p='pushd'  # NOTE: might be easier to use bashmarks and b/go keyword
+alias o='popd'
+alias back='cd - && lla'
+
+
+##  Programs
+alias py='python'
+alias js='javascript'
+alias cs='coffee'
+alias red='redis-cli'  # redis has to be in the path
+alias pybs='python'  # TODO: has to be a way to prep with a file - points to bootstrap file (can put things like import redis in it)
+
+
+##  git
+alias g='git'
+alias gita='git add'
+alias gitam='git commit -am'
+alias gitm='git commit -m'
+alias gd='git diff'
+alias gitma='git commit --ammend'
+alias gitamend='git commit --amend -m'  # redo the last commit on this file - nifty if need a quick redo
+alias gitc='git commit'
+alias gitup='git push -u origin master'
+alias gitnumber='expr $(git rev-list master --count) - $(git rev-list HEAD..master --count)'
+alias gits='git status'
+alias gitls='git ls-files'
+alias gitcon='more .git/dotfiles'
+alias gitmerge='git pull origin master'
+alias gitlone='git log --pretty=oneline'
+# TODO: commands below need variable added to function
+alias gitsetgit='git remote add origin git@github.com:JaredVogt/'  # TODO: this is what you want 'git remote add origin git@github.com:JaredVogt/smsfun.git' - github
+alias gitsetbit='echo not set up yet'  #  TODO: git remote add origin https://jaredvogt@bitbucket.org/jaredvogt/MultipleAPI.git' - bitbucket
+
+
+##  source commands
+alias sbp='source ~/.bash_profile'  # reload alias file'  # this is the key one!
+alias spb='echo sbp idiot!!!!'
+alias bpr='echo "dope, you want sbp - which sources ~/.bash_profile"'  # reload bash profile
+alias resource='ar bpr'
+
+
+## random
+alias speedtest='wget -O /dev/null http://speedtest.wdc01.softlayer.com/downloads/test10.zip'
+
+
+## Process manipulation
+pfind () { ps -e | /usr/bin/grep -i $@ | grep -v Helper ; }  # use this to find an app - haven't tried on linux
+alias suspend='kill -STOP'
+alias resume='kill -CONT'
