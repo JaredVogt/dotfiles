@@ -40,11 +40,11 @@ alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
 
 
 ## shortcuts to edit specific dotfiles
-alias allc='v -p ~/.vimrc ~/dotfiles/myBashProfile ~/.bash_profile ~/dotfiles/myAliases ~/.inputrc'  # -p directs to open each file in a tab
+alias allc='v -p ~/.vimrc ~/dotfiles/runcom/myBashProfile ~/.bash_profile ~/dotfiles/system/aliase ~/.inputrc'  # -p directs to open each file in a tab
 alias vimrc='v ~/.vimrc'
-alias myBashProfile='mvim ~/dotfiles/myBashProfile'
-alias myAliases='mvim ~/dotfiles/myAliases'
-alias myFunctions='mvim ~/dotfiles/myFunctions'
+alias myBashProfile='mvim ~/dotfiles/runcom/myBashProfile'
+alias myAliases='mvim ~/dotfiles/system/alias'
+alias myFunctions='mvim ~/dotfiles/system/functions'
 # TODO: this should be a function that pops up a list of files to edit - could be triggered with the command dot
 
 

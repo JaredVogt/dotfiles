@@ -1,14 +1,14 @@
 #shellsyntax
 ## alias files
 # TODO: this should be conditional based on OS
-source $HOME/dotfiles/myAliases
-# source $HOME/dotfiles/myAliasesMac
-# source $HOME/dotfiles/myAliasesCore
-# source $HOME/dotfiles/myAliasesApp
+source $HOME/dotfiles/system/alias
+# source $HOME/dotfiles/system/myAliasesMac
+# source $HOME/dotfiles/system/myAliasesCore
+# source $HOME/dotfiles/system/myAliasesApp
 alias lla='ls -alhF'
 
 ## my custom functions
-# source $HOME/.config/myFunctions
+# source $HOME/.config/system/myFunctions
 
 ## history settings
 export HISTSIZE=100000
