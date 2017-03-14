@@ -1,4 +1,5 @@
 # Install Caskroom
+# `brew cask list` to get list of installed packages
 
 brew tap caskroom/cask
 brew install brew-cask

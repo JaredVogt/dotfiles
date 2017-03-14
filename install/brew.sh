@@ -1,4 +1,6 @@
 # Install Homebrew
+# `brew leaves` to list out installed brew packages (not dependencies)
+# http://apple.stackexchange.com/questions/101090/list-of-all-packages-installed-using-homebrew
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew tap homebrew/versions
