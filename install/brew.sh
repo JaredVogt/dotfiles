@@ -15,6 +15,7 @@ apps=(
 ## mine
 coffeescript
 diff-so-fancy
+bash-completion@2
 handbrake
 htop
 jq
