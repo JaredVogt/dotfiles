@@ -27,8 +27,9 @@ alias lsdr='ls -alhFR | grep "^d" | more'  # get directories only TODO: this is 
 alias k9='kill -9'
 alias qf='sudo find / -name'
 alias qf2='locate'
-alias hg="history | grep"
-alias ag="alias | grep"
+alias hg="history | grep -i"
+alias ag="alias | grep -i"
+alias pg="ps -ax | grep -i"
 alias rmr='rm -iR'
 # alias vim='/usr/local/bin/vim -u ~/.vimrc'
 alias v='mvim -u ~/.vimrc'
@@ -60,6 +61,10 @@ alias up='cd .. && lla'
 alias p='pushd'  # NOTE: might be easier to use bashmarks and b/go keyword
 alias o='popd'
 alias back='cd - && lla'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
 
 
 ##  Programs
