@@ -2,13 +2,14 @@
 ## alias files
 # TODO: this should be conditional based on OS
 source $HOME/dotfiles/system/alias
-# source $HOME/dotfiles/system/myAliasesMac
+source $HOME/dotfiles/system/alias.macos
 # source $HOME/dotfiles/system/myAliasesCore
 # source $HOME/dotfiles/system/myAliasesApp
 alias lla='ls -alhF'
 
 ## my custom functions
-# source $HOME/.config/system/myFunctions
+source $HOME/dotfiles/system/function
+source $HOME/dotfiles/system/function.macos
 
 ## history settings
 export HISTSIZE=100000
@@ -24,15 +25,16 @@ export BROWSER=/Applications/Google\ Chrome.app
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegBdabagacad
 
+# git-completion
 if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
     . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 fi
-
 source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWCOLORHINTS=1
 
+# bash completion (uses bash-comletion@2 via brew)
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
   . /usr/local/share/bash-completion/bash_completion
 fi
@@ -41,15 +43,10 @@ fi
 PS1='\[\033[s\033[2;0H\033[0;42m\033[K\033[1;33mSERVER-\h\033[0m\033[u\[\e[0;38;44m\]\u@\h:\[\e[0m\]\[\e[0;32;44m\]\w\[\e[0m\](\#) \D{%m.%d}.\t\[\033[31m\]$(__git_ps1)\[\033[00m\]\n👫 ► '  # see scripts/setPrompt.sh
 # source $HOME/dotfiles/scripts/setPrompt.sh  # conditionally set PS1
 
-if [ -f /opt/local/etc/bash_completion ]; then
-     . /opt/local/etc/bash_completion
-fi
-
 ## other stuff
 # http://hints.macworld.com/article.php?story=20050904022246573, http://superuser.com/questions/59175/is-there-a-way-to-make-bash-more-tab-friendly, another option - http://bash-completion.alioth.debian.org/
 bind '"\t":menu-complete'  # tab cycles around options
 #bind ‘set completion-ignore-case on’  # FIXME: this is turned off because it wasn't working  bind 'set completion-ignore-case on'
-bind "set show-all-if-ambiguous on"  # this shows all possible options on tab
 
 ## path settings
 export PATH="/usr/local/bin:$PATH"

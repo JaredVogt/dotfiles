@@ -1,0 +1,5 @@
+alias sym='cd ~/Dropbox/configFiles/symlinks && lla'
+alias sgo='cd ~/Dropbox/configFiles/symlinks && mvim .'
+alias dot='cd ~/dotfiles && lla'
+alias proj='cd ~/projects && lla'
+

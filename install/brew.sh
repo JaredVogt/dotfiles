@@ -19,6 +19,7 @@ bash-completion@2
 handbrake
 htop
 jq
+mackup
 mas
 neovim/neovim/neovim
 perl
@@ -26,7 +27,8 @@ python
 ruby
 vim
 wget
-
+zsh
+zsh-completions
 ## suggested
 # bash-completion2
 bats

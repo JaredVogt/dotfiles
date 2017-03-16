@@ -33,6 +33,7 @@ alias pg="ps -ax | grep -i"
 alias rmr='rm -iR'
 # alias vim='/usr/local/bin/vim -u ~/.vimrc'
 alias v='mvim -u ~/.vimrc'
+alias mcm='open -a MacVim'  # if the file is aleady open in MacVim, this will jump to it
 alias vim='echo "did you mean mvim?";read -rsp $"Press any key to continue..." -n1 key;vim'
 alias vt='mvim -u ~/.vimrc --remote-tab'  # http://apple.stackexchange.com/questions/105603/mvim-macvim-7-4-opening-new-windows-rather-than-tabs-mac-os-x-10-8-5
 alias vs='mvim -S'
@@ -41,11 +42,10 @@ alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
 
 
 ## shortcuts to edit specific dotfiles
-alias allc='v -p ~/.vimrc ~/dotfiles/runcom/myBashProfile ~/.bash_profile ~/dotfiles/system/aliase ~/.inputrc'  # -p directs to open each file in a tab
-alias vimrc='v ~/.vimrc'
-alias myBashProfile='mvim ~/dotfiles/runcom/myBashProfile'
-alias myAliases='mvim ~/dotfiles/system/alias'
-alias myFunctions='mvim ~/dotfiles/system/functions'
+alias vimrc='mcm ~/.vimrc'
+alias mbp='mcm ~/dotfiles/runcom/myBashProfile'
+alias ails='mcm ~/dotfiles/system/alias'
+alias funks='mcm ~/dotfiles/system/function'
 # TODO: this should be a function that pops up a list of files to edit - could be triggered with the command dot
 
 

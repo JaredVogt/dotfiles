@@ -1,5 +1,7 @@
 #!/bin/bash
 
 # link these files to the home directory
-ln -n runcom/.bash_profile ~/.
-ln -n runcom/.inputrc ~/.
+ln -sf ~/dotfiles/runcom/.bash_profile ~/.
+ln -sf ~/dotfiles/runcom/.inputrc ~/.
+ln -sf ~/dotfiles/git/.gitconfig ~/.
+ln -sf ~/dotfiles/zsh/.zshrc ~/.zshrc

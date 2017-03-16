@@ -19,28 +19,28 @@ dropbox
 firefox
 firefox-nightly
 forklift
-glimmerblocker
+glimmerblocker  # ad blocker https://glimmerblocker.org/
 google-chrome
 google-chrome-canary
 google-drive
-hammerspoon
-hyper
-kaleidoscope
+hammerspoon  # mac automation tool
+hyper  # JS/HTML/CSS Terminal
+kaleidoscope  # file comparison application
 keyboard-maestro
 keycastr
 little-snitch
 macvim
 mailplane
-oversight
+oversight  # monitor camera/microphone access by apps
 path-finder
 pdftotext
 putio-adder
-screenflow
+screenflow  # screen recording
 skype
 slack
-spectacle
+spectacle  # move windows around
 spotify
-stay
+stay  # window management
 sublime-text
 textexpander
 transmit

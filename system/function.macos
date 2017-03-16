@@ -1,0 +1,5 @@
+manpdf(){  # open a man page in preview
+  man -t $1 | open -f -a preview
+}
+
+

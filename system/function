@@ -1,0 +1,14 @@
+# Some git functions
+gitld(){
+  git log -p -$1  # use this to look at log for a specific file passed as arguement
+}
+
+gitgo(){
+  gitam "$*" && gitup
+}
+
+
+seattle() {
+  local CITY=${1:-Seattle}
+  curl -4 "wttr.in/$CITY"
+}

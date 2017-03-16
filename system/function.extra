@@ -1,0 +1,210 @@
+#!/bin/bash
+
+# this has tons of very useful info - https://github.com/mathiasbynens/dotfiles/blob/master/.functions
+# TODO: figure out how to query a shell for user defined functions
+
+## Search shortcuts
+google() { open /Applications/Google\ Chrome.app/ "http://www.google.com/search?q= $1"; }  # http://osxdaily.com/2013/08/22/start-web-search-from-command-line/
+imdb() { open /Applications/Google\ Chrome.app/ "http://www.imdb.com/find?q= $1"; }
+
+
+mdm(){  # create a directory and move into it
+  mkdir $1 && cd $1
+}
+
+airplane(){  # save battery!
+  echo "setting machine to airplane mode. This will turn off wifi, bluetooth, sugarsync, dropbox, and suspend browsers."
+  # airplane.sh
+}
+
+lcd(){  # cd and lla
+  cd $1 && lla
+}
+
+vnc(){  # open a vnc connection to server supplied as arguement
+  open vnc://$1
+}
+
+sshtest(){  # use this to pass along commands to ssh
+  # ./.bash_profile have to check which to run
+  # send in the host as a variable as well?
+  # use the -i option, and certs for all ssh
+  if [ $1 ]; then
+    ssh -i ~/.ssh/WestBest.pem ubuntu@54.245.104.230 'source .bash_profile $1'
+    # echo "The answer is YES."
+  else
+    $ITERM_PROFILE_JREMOTE && ssh -i ~/.ssh/WestBest.pem ubuntu@54.245.104.230 && $ITERM_PROFILE_JLOCAL
+    # echo "The answer is UNKNOWN."
+  fi
+}
+
+leases(){  # conf/acitve - lease configured/leases active
+  # TODO: have this call a CS script that does more sophisticated forrmatting
+  if [ "$1" = "conf" ]; then
+    ssh diskstation "more /etc/dhcpd/dhcpd-static-static.conf"
+  elif [ "$1" = "active" ]; then
+    ssh diskstation 'more /etc/dhcpd/dhcpd.conf.leases'
+  else
+    echo "append either conf or active."
+  fi
+}
+
+# pia(){  # check to see if PIA is running
+#   myip=$(dig +short myip.opendns.com @resolver1.opendns.com)
+#   comcast='76.121.91.152'
+#   if [ "$myip" != "$comcast" ]; then
+#     echo "PIA appears to be running (Current: $myip, Comcast: $comcast)";
+#   fi
+# }
+
+san(){  # open a man page in sublime
+  MANWIDTH=80 MANPAGER='col -bx' man $1 rev-parse | subl
+}
+
+pb(){  # search for piratebay file and send to deluge for download
+  coffee $PROJECT_HOME/deluge/pirateSlurp.coffee -b -c 50 -t -s "$*"  # NOTE: used $* to pass in all arguements as a single string
+  # FIXME: need to support additional flags - like -v and -h in particular. IOW, if $n has -, its a flag and append to command string appropriately (don't include it in title).
+}
+
+popmd(){  # pop a markdown file in browser
+  file='README.md'
+  # TODO: assign README.md as default - so if not arguement given, then popmd should open README.md that is in current directory.
+  # Or alternatively, if no argument is given, pop a list of *.md files in current directory for quick selection.
+  $PROJECT_HOME/coffeeUtils/GFM2HTML.coffee -f $1
+}
+
+# TODO: be damn cool if this printed color coded - that would require some regex - or I could move this to CS and do it there - a little easier perhaps
+# TODO: highlight the command name in color
+# TODO: do not show commented lines
+# TODO: only print dividers if there is an actual hit for a given file - so no dividers absent commands
+# TODO: have the help message print in a dif color
+# cg(){  ## grep the alias files - this shows comments and descriptions as well (mcg = my commands grep)
+#   local RED=$(echo -e '\033[41m\033[37m')
+#   local GREEN=$(echo -e '\033[39m\033[37m')
+#   local NORMAL=$(echo -e '\033[0m')
+#   # TODO: change grep to a regex so it doesn't clip things that are commented out
+#   echo -e "${GREEN}****myAliasesMac****${NORMAL}"  # -e enables escape sequences - so how do I get escape sequences with less or sed?
+#   less ~/.config/myAliasesMac | grep -i $1 | sed -e 's/alias/ /' -e 's/=/ -- /' -e "s/ #/${RED}##${NORMAL}/"
+#   echo '****myAliases****'
+#   less ~/.config/myAliases | grep -i $1 | sed -e 's/alias/ /' -e 's/=/ -- /' -e "s/ #/${RED}##${NORMAL}/"
+#   echo '****myFunctions****'
+#   less ~/.config/myFunctions | grep -i $1 | sed -e 's/alias/ /' -e 's/=/ -- /' -e "s/ #/${RED}##${NORMAL}/"
+# }
+
+# http://brettterpstra.com/2011/12/28/a-simple-but-handy-bash-function-console/
+console(){
+  if [[ $# > 0 ]]; then
+    query=$(echo "$*"|tr -s ' ' '|')
+    tail -f /var/log/system.log|grep -i --color=auto -E "$query"
+  else
+    tail -f /var/log/system.log
+  fi
+}
+
+mcs(){
+  coffee -v "$1"
+  echo "next step"
+}
+
+# Inyo shortcuts
+# osascript -e 'tell application "Inyo"' -e 'inquire "How was your day?? Want coffee? (another example)" peer "jaredvogt"' -e 'end tell'
+yodad(){
+  osascript -e 'tell application "Inyo"' -e 'notify "'"$*"'" peer "jaredvogt" block false' -e 'end tell'
+}
+
+yotube(){
+  osascript -e 'tell application "Inyo"' -e 'youtube "'"$*"'" opacity 30 left "25" right "25" top "25" bottom "25" autoplay false move true' -e 'end tell'
+  # echo $*
+}
+
+yoweb(){
+  osascript -e 'tell application "Inyo"' -e 'html "'"$*"'" opacity 80 height "50" width "50" move true submit false focus false' -e 'end tell'
+}
+
+# use this to launch JXA stubs written in coffeescript
+cinyo(){
+  coffee -p $* | osascript -l JavaScript
+}
+
+# use this to jot down quick things learned and have it show up in evernote notebook
+quick(){
+  config "$*" -t quick
+}
+
+# use this to jot down todos
+todo(){
+  config "$*" -t todo
+}
+
+# use this to jot down todos
+hothot(){
+  config "$*" -t todo -t hothot
+}
+
+# geeknote setup
+# geeknote create --title 'test' --notebook 'Config' --content "WRITE"
+conmd(){
+  geeknote create --title "$*" --notebook 'Config' --tags "config, "$(hostname)"" --content "WRITE"
+}
+
+# use this to pretty print something
+pretty(){
+  cat "$*" | python -m json.tool | less
+}
+
+# http://brettterpstra.com/2015/04/27/a-universal-clipboard-command-for-bash/
+copy() {
+  if [[ $1 =~ ^-?[hH] ]]; then
+
+    echo "Intelligently copies command results, text file, or raw text to"
+    echo "OS X clipboard"
+    echo
+    echo "Usage: copy [command or text]"
+    echo "  or pipe a command: [command] | copy"
+    return
+  fi
+
+  local output
+  local res=false
+  local tmpfile="${TMPDIR}/copy.$RANDOM.txt"
+  local msg=""
+
+  if [[ $# == 0 ]]; then
+    output=$(cat)
+    msg="Input copied to clipboard"
+    res=true
+  else
+    local cmd=""
+    for arg in $@; do
+      cmd+="\"$(echo -en $arg|sed -E 's/"/\\"/g')\" "
+    done
+    output=$(eval "$cmd" 2> /dev/null)
+    if [[ $? == 0 ]]; then
+      msg="Results of command are in the clipboard"
+      res=true
+    else
+      if [[ -f $1 ]]; then
+        output=""
+        for arg in $@; do
+          if [[ -f $arg ]]; then
+            type=`file "$arg"|grep -c text`
+            if [ $type -gt 0 ]; then
+              output+=$(cat $arg)
+              msg+="Contents of $arg are in the clipboard.\n"
+              res=true
+            else
+              msg+="File \"$arg\" is not plain text.\n"
+            fi
+          fi
+        done
+      else
+        output=$@
+        msg="Text copied to clipboard"
+        res=true
+      fi
+    fi
+  fi
+
+  $res && echo -ne "$output" | pbcopy -Prefer txt
+  echo -e "$msg"
+}
