@@ -9,10 +9,8 @@ Once you have Vimium installed, you can see this list of key bindings at any tim
 Navigating the current page:
 
     ?       show the help dialog for a list of all available keys
-    H       scroll left
-    j       scroll down
+    **j**       scroll down
     k       scroll up
-    L       scroll right
     gg      scroll to top of the page
     G       scroll to bottom of the page
     d       scroll down half a page
@@ -45,13 +43,13 @@ For advanced usage, see [regular expressions](https://github.com/philc/vimium/wi
 
 Navigating your history:
 
-    h       go back in history
-    l       go forward in history
+    H       go back in history
+    L       go forward in history
 
 Manipulating tabs:
 
-    J, gT   go one tab left
-    K, gt   go one tab right
+    h       go one tab left
+    l       go one tab right
     g0      go to the first tab
     g$      go to the last tab
     ^       visit the previously-visited tab
@@ -89,3 +87,22 @@ Vimium supports command repetition so, for example, hitting `5t` will open 5 tab
 
 There are some advanced commands which aren't documented here; refer to the help dialog (type `?`) for a full
 list.
+
+### My mappings
+```
+# Insert your preferred key mappings here.
+# Useful list of commands - https://github.com/philc/vimium/wiki/Key-Mappings
+map  F LinkHints.activateMode
+map  f LinkHints.activateModeToOpenInNewTab
+map  H goBack
+map  L goForward
+map  l nextTab
+map  h previousTab
+map o Vomnibar.activateInNewTab
+map O Vomnibar.activate
+map b Vomnibar.activateBookmarksInNewTab
+map B Vomnibar.activateBookmarks
+
+map <c-h> createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#keyboard-bindings
+map t createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#keyboard-bindings
+```
