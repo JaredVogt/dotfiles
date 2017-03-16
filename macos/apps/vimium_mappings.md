@@ -8,22 +8,22 @@ Once you have Vimium installed, you can see this list of key bindings at any tim
 
 Navigating the current page:
 
-    ?       show the help dialog for a list of all available keys
-   *j       scroll down
-    k       scroll up
-    gg      scroll to top of the page
-    G       scroll to bottom of the page
-    d       scroll down half a page
-    u       scroll up half a page
-    F       open a link in the current tab
-    f       open a link in a new tab
-    r       reload
-    gs      view source
-    i       enter insert mode -- all commands will be ignored until you hit Esc to exit
-    yy      copy the current url to the clipboard
-    yf      copy a link url to the clipboard
-    gf      cycle forward to the next frame
-    gF      focus the main/top frame
+      ?       show the help dialog for a list of all available keys
+     *j       scroll down
+     *k       scroll up
+      gg      scroll to top of the page
+      G       scroll to bottom of the page
+      d       scroll down half a page
+      u       scroll up half a page
+      F       open a link in the current tab
+      f       open a link in a new tab
+      r       reload
+      gs      view source
+      i       enter insert mode -- all commands will be ignored until you hit Esc to exit
+      yy      copy the current url to the clipboard
+      yf      copy a link url to the clipboard
+      gf      cycle forward to the next frame
+      gF      focus the main/top frame
 
 Navigating to new pages:
 
