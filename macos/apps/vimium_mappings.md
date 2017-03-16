@@ -9,7 +9,7 @@ Once you have Vimium installed, you can see this list of key bindings at any tim
 Navigating the current page:
 
     ?       show the help dialog for a list of all available keys
-    **j**       scroll down
+   *j       scroll down
     k       scroll up
     gg      scroll to top of the page
     G       scroll to bottom of the page
