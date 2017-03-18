@@ -66,13 +66,6 @@ pb(){  # search for piratebay file and send to deluge for download
   # FIXME: need to support additional flags - like -v and -h in particular. IOW, if $n has -, its a flag and append to command string appropriately (don't include it in title).
 }
 
-popmd(){  # pop a markdown file in browser
-  file='README.md'
-  # TODO: assign README.md as default - so if not arguement given, then popmd should open README.md that is in current directory.
-  # Or alternatively, if no argument is given, pop a list of *.md files in current directory for quick selection.
-  $PROJECT_HOME/coffeeUtils/GFM2HTML.coffee -f $1
-}
-
 # TODO: be damn cool if this printed color coded - that would require some regex - or I could move this to CS and do it there - a little easier perhaps
 # TODO: highlight the command name in color
 # TODO: do not show commented lines

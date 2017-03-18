@@ -17,15 +17,17 @@ bitbar
 brave
 dropbox
 firefox
+evernote
 firefox-nightly
 forklift
-glimmerblocker  # ad blocker https://glimmerblocker.org/
 google-chrome
 google-chrome-canary
 google-drive
 hammerspoon  # mac automation tool
 hyper  # JS/HTML/CSS Terminal
+iterm2
 kaleidoscope  # file comparison application
+karabiner-elements
 keyboard-maestro
 keycastr
 little-snitch

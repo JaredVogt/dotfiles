@@ -1,5 +1,18 @@
-manpdf(){  # open a man page in preview
+# open a man page in preview
+manpdf(){  
   man -t $1 | open -f -a preview
+}
+
+# pop a markdown file in browser
+popmd(){  
+  file='README.md'
+  # TODO: assign README.md as default - so if not arguement given, then popmd should open README.md that is in current directory.
+  # Or alternatively, if no argument is given, pop a list of *.md files in current directory for quick selection.
+  $PROJECT_HOME/utilities/GFM2HTML.coffee -f $1
+  sleep 2s  # NOTE awesome! This worked - just need to wait a sec before deleting file allowing enough time to open in browser
+  [[ $1 =~ (.*)\.md ]]  # http://stackoverflow.com/questions/1891797/capturing-groups-from-a-grep-regex
+  baseName="${BASH_REMATCH[1]}"
+  rm $baseName.html
 }
 
 

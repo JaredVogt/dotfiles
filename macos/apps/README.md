@@ -9,12 +9,13 @@ Bitbar needs to be pointed at a directory for its plugins. My plugins in are in 
 
 ### karabiner
 TODO: build a script. Details in README.md in directory
+This lives in `~/Dropbox/configFiles/Karabiner/karabiner.json` and needs to be symlinked to `.config/karabiner/karabiner.json`
 
 ### atom
 Currently don't have any configuration setup.
 
 ### Keyboard Maestro
-mackup!
+mackup!  I am not sure this is mackup?
 
 
 ### Popclip

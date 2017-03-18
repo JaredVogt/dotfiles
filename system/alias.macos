@@ -1,5 +1,6 @@
-alias sym='cd ~/Dropbox/configFiles/symlinks && lla'
-alias sgo='cd ~/Dropbox/configFiles/symlinks && mvim .'
+alias sym='cd ~/.config/symlinks && lla'
+alias dots='cd ~/.config/symlinks && mvim .'
 alias dot='cd ~/dotfiles && lla'
 alias proj='cd ~/projects && lla'
-
+alias config='~/projects/utilities/config2evernote.py'
+alias hm='popmd $PROJECT_HOME/utilities/helpme.md'

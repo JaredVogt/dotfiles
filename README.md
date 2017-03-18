@@ -19,12 +19,9 @@ Install the dotfiles with Git:
     git clone https://github.com/jaredvogt/dotfiles.git ~/dotfiles
     source ~/dotfiles/install.sh
     ~/dotfiles/install/bash.sh  # this installs the latest shell via brew and updates all appropriate stuff
+    `brew.sh`  # this installs brew first - and then all the brew apps
 
     install.sh needs to be updated for my install - at this point its pretty barebones.
-
-
-
-
 
 
 

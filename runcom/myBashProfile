@@ -51,9 +51,25 @@ bind '"\t":menu-complete'  # tab cycles around options
 ## path settings
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local:$PATH"
-export PATH="$HOME/dotfile/scripts:$PATH"  # all custom scripts live in this folder [deprecate?]
+export PATH="$HOME/dotfiles/macos/scripts:$PATH"  # all custom scripts live in this folder [deprecate?]
+
+# some envs
+source $HOME/dotfiles/system/env.macos
 
 ## Tips and Tricks
 # http://natelandau.com/my-mac-osx-bash_profile/
 # http://natelandau.com/bash-scripting-utilities/
 # https://gist.github.com/brandonb927/3195465
+
+# Below is example on how to source all the system dotfiles - comment out now
+# # Finally we can source the dotfiles (order matters)
+
+# for DOTFILE in "$DOTFILES_DIR"/system/.{function,function_*,path,env,alias,completion,grep,prompt,nvm,rvm,custom}; do
+#   [ -f "$DOTFILE" ] && . "$DOTFILE"
+# done
+
+# if [ "$OS" = "macOS" ]; then
+#   for DOTFILE in "$DOTFILES_DIR"/system/.{env,alias,function}.macos; do
+#     [ -f "$DOTFILE" ] && . "$DOTFILE"
+#   done
+# fi
