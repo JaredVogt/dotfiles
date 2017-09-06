@@ -1,9 +1,12 @@
+[helpme](test)
+
 Keyboard Bindings
 -----------------
 
 Modifier keys are specified as `<c-x>`, `<m-x>`, and `<a-x>` for ctrl+x, meta+x, and alt+x
 respectively. See the next section for how to customize these bindings.
 
+`t` pops this file in a new tab
 `*` designates some particularly useful ones!
 
 Navigating the current page:
