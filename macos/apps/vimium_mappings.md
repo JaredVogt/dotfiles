@@ -1,9 +1,27 @@
-## My shortcuts
-* map t createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#keyboard-bindings
-* map z createTab www.native-instruments.com/forum/forums/maschine-area.222/ line6.com/support/forum/86-helix/
-* map c createTab https://coinmarketcap.com/
-* map a createTab file:///tmp/helpme.html
- 
+## My mappings
+
+This chunk goes in vimium perference keymapping dialog.
+```
+# Insert your preferred key mappings here.
+# Useful list of commands - https://github.com/philc/vimium/wiki/Key-Mappings
+map F LinkHints.activateMode
+map f LinkHints.activateModeToOpenInNewTab
+map H goBack
+map L goForward
+map l nextTab
+map h previousTab
+map o Vomnibar.activateInNewTab
+map O Vomnibar.activate
+map b Vomnibar.activateBookmarksInNewTab
+map B Vomnibar.activateBookmarks
+
+map <c-h> createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#my-mappings
+map t createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#keyboard-bindings
+map z createTab www.native-instruments.com/forum/forums/maschine-area.222/ line6.com/support/forum/86-helix/
+map c createTab https://coinmarketcap.com/
+map a createTab file:///tmp/helpme.html
+ ```
+
 Keyboard Bindings
 -----------------
 
@@ -11,6 +29,7 @@ Modifier keys are specified as `<c-x>`, `<m-x>`, and `<a-x>` for ctrl+x, meta+x,
 respectively. See the next section for how to customize these bindings.
 
 `t` pops this file in a new tab
+
 `*` designates some particularly useful ones!
 
 Navigating the current page:
@@ -95,22 +114,4 @@ Vimium supports command repetition so, for example, hitting `5t` will open 5 tab
 There are some advanced commands which aren't documented here; refer to the help dialog (type `?`) for a full
 list.
 
-### My mappings
-This chunk goes in vimium perference keymapping dialog.
-```
-# Insert your preferred key mappings here.
-# Useful list of commands - https://github.com/philc/vimium/wiki/Key-Mappings
-map  F LinkHints.activateMode
-map  f LinkHints.activateModeToOpenInNewTab
-map  H goBack
-map  L goForward
-map  l nextTab
-map  h previousTab
-map o Vomnibar.activateInNewTab
-map O Vomnibar.activate
-map b Vomnibar.activateBookmarksInNewTab
-map B Vomnibar.activateBookmarks
 
-map <c-h> createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#keyboard-bindings
-map t createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#keyboard-bindings
-```
