@@ -1,5 +1,9 @@
-[helpme](test)
-
+## My shortcuts
+* map t createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vimium_mappings.md#keyboard-bindings
+* map z createTab www.native-instruments.com/forum/forums/maschine-area.222/ line6.com/support/forum/86-helix/
+* map c createTab https://coinmarketcap.com/
+* map a createTab file:///tmp/helpme.html
+ 
 Keyboard Bindings
 -----------------
 
