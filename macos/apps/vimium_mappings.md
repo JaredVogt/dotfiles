@@ -1,6 +1,6 @@
-## My mappings
+## My Mappings
 
-This chunk goes in vimium perference keymapping dialog.
+This chunk goes in vimium preference keymapping dialog. [EDIT](chrome-extension://dbepggeogbaibhgnhhndojpepiihcmeb/pages/options.html)
 ```
 # Insert your preferred key mappings here.
 # Useful list of commands - https://github.com/philc/vimium/wiki/Key-Mappings
@@ -20,9 +20,10 @@ map t createTab https://github.com/JaredVogt/dotfiles/blob/master/macos/apps/vim
 map z createTab www.native-instruments.com/forum/forums/maschine-area.222/ line6.com/support/forum/86-helix/
 map c createTab https://coinmarketcap.com/
 map a createTab file:///tmp/helpme.html
+map w createWindow https://test
  ```
 
-Keyboard Bindings
+Keyboard Bindings (defaults)
 -----------------
 
 Modifier keys are specified as `<c-x>`, `<m-x>`, and `<a-x>` for ctrl+x, meta+x, and alt+x
