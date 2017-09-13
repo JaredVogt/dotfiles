@@ -17,9 +17,9 @@ bitbar
 brave
 dropbox
 firefox
-evernote
 firefox-nightly
 forklift
+gitter
 google-chrome
 google-chrome-canary
 google-drive
@@ -39,7 +39,6 @@ pdftotext
 putio-adder
 screenflow  # screen recording
 skype
-slack
 spectacle  # move windows around
 spotify
 stay  # window management

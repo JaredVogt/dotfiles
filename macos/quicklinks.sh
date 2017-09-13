@@ -1,9 +1,10 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # This is the file that creates ~/.config/symlinks
 SYMLINKDIR=~/.config/symlinks/
 READMES=~/.config/symlinks/README/
-SNIPPETS=~/.config/symlinks/SNIPPETS/
+SNIPPETS=~/.config/symlinks/snippets/
+BITBAR=~/.config/symlinks/bitbar/
 mkdir -p $SYMLINKDIR
 ln -sf ~/dotfiles/macos/quicklinks.sh $SYMLINKDIR/.
 
@@ -21,8 +22,14 @@ declare -a files=(
 ~/dotfiles/system/function.extra
 ~/dotfiles/system/function.macos
 ~/dotfiles/runcom/myBashProfile
+~/dotfiles/install.sh
+~/dotfiles/macos/scripts.sh
+~/dotfiles/macos/scripts.sh
+~/vimrc/linkFiles.sh
 )
-for file in "${files[@]}"; do ln -sf "$file" $SYMLINKDIR/.; done
+for file in "${files[@]}"
+  do ln -sfv "$file" $SYMLINKDIR/.
+done
 
 
 # README.md's to quickly access (append meaningful name to the front)
@@ -39,4 +46,10 @@ ln -sf ~/projects/utilities/helpme.md $READMES/helpme.README.md
 mkdir -p $SNIPPETS
 ln -sf ~/.vim/mySnips/jareds-coffee.snippets $SNIPPETS/jareds-coffee.snippets
 ln -sf ~/.vim/mySnips/jareds-shell.snippets $SNIPPETS/jareds-shell.snippets
+ln -sf ~/.vim/mySnips/more-shell.snippets $SNIPPETS/more-shell.snippets
+
+# snippet files to quickly bitbar
+mkdir -p $BITBAR
+ln -sf ~/projects/bitbar/gh.coffee $BITBAR/gh.coffee
+ln -sf ~/projects/bitbar/favs.coffee $BITBAR/favs.coffee
 

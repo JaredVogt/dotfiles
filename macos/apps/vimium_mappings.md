@@ -1,6 +1,6 @@
 ## My Mappings
 
-This chunk goes in vimium preference keymapping dialog. [EDIT](chrome-extension://dbepggeogbaibhgnhhndojpepiihcmeb/pages/options.html)
+This chunk goes in vimium preference keymapping dialog.
 ```
 # Insert your preferred key mappings here.
 # Useful list of commands - https://github.com/philc/vimium/wiki/Key-Mappings

@@ -13,39 +13,41 @@ brew upgrade
 
 apps=(
 ## mine
+apparix
 coffeescript
 diff-so-fancy
 bash-completion@2
 handbrake
 htop
+jrnl
 jq
 mackup
 mas
 neovim/neovim/neovim
 perl
 python
+rmtrash
 ruby
 vim
 wget
 zsh
 zsh-completions
 ## suggested
-# bash-completion2
-bats
-battery
+bash-completion2
+# bats
+# battery
 coreutils
 dockutil
 ffmpeg
 fasd
-gifsicle
-git
+# gifsicle
+# git
 git-extras
 gnu-sed --with-default-names
 grep --with-default-names
 hub
 httpie
 imagemagick
-mackup
 peco
 psgrep
 shellcheck

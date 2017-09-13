@@ -10,6 +10,7 @@ alias lla='ls -alhF'
 ## my custom functions
 source $HOME/dotfiles/system/function
 source $HOME/dotfiles/system/function.macos
+source $HOME/dotfiles/system/function.apparix
 
 ## history settings
 export HISTSIZE=100000
@@ -27,7 +28,7 @@ export LSCOLORS=ExFxBxDxCxegBdabagacad
 
 # git-completion
 if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
-    . /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
+  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 fi
 source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
@@ -36,7 +37,12 @@ export GIT_PS1_SHOWCOLORHINTS=1
 
 # bash completion (uses bash-comletion@2 via brew)
 if [ -f /usr/local/share/bash-completion/bash_completion ]; then
-  . /usr/local/share/bash-completion/bash_completion
+  source /usr/local/share/bash-completion/bash_completion
+fi
+
+# hub completion
+if [ -f /usr/local/etc/bash_completion.d/hub.bash_completion ]; then
+  source /usr/local/etc/bash_completion.d/hub.bash_completion
 fi
 
 ## prompt settings
@@ -52,6 +58,7 @@ bind '"\t":menu-complete'  # tab cycles around options
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local:$PATH"
 export PATH="$HOME/dotfiles/macos/scripts:$PATH"  # all custom scripts live in this folder [deprecate?]
+export PATH="$HOME/bin:$PATH"  # all custom scripts live in this folder [deprecate?]
 
 # some envs
 source $HOME/dotfiles/system/env.macos

@@ -19,6 +19,7 @@ alias ll='ls -l'
 alias more="less -N"
 #alias cd=cdd
 alias lla='ls -halFG'
+alias l='lla'
 alias llat='ls -halFt'
 alias llar='ls -alhFR | more'
 alias lsd='ls -alhF | grep "^d"'  # get directories only
@@ -32,11 +33,6 @@ alias ag="alias | grep -i"
 alias pg="ps -ax | grep -i"
 alias rmr='rm -iR'
 # alias vim='/usr/local/bin/vim -u ~/.vimrc'
-alias v='mvim -u ~/.vimrc'
-alias mcm='open -a MacVim'  # if the file is aleady open in MacVim, this will jump to it
-alias vim='echo "did you mean mvim?";read -rsp $"Press any key to continue..." -n1 key;vim'
-alias vt='mvim -u ~/.vimrc --remote-tab'  # http://apple.stackexchange.com/questions/105603/mvim-macvim-7-4-opening-new-windows-rather-than-tabs-mac-os-x-10-8-5
-alias vs='mvim -S'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
 
@@ -61,10 +57,10 @@ alias up='cd .. && lla'
 alias p='pushd'  # NOTE: might be easier to use bashmarks and b/go keyword
 alias o='popd'
 alias back='cd - && lla'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
+alias ..='cd .. && lla'
+alias ...='cd ../.. && lla'
+alias ....='cd ../../.. && lla'
+alias .....='cd ../../../.. && lla'
 
 
 ##  Programs

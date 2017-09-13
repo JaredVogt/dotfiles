@@ -1,6 +1,27 @@
+########################################################
+# osx laptop specific aliases
+########################################################
+
 alias sym='cd ~/.config/symlinks && lla'
 alias dots='cd ~/.config/symlinks && mvim .'
+alias snips='cd ~/.vim/mySnips && mvim .'
 alias dot='cd ~/dotfiles && lla'
 alias proj='cd ~/projects && lla'
 alias config='~/projects/utilities/config2evernote.py'
 alias hm='popmd $PROJECT_HOME/utilities/helpme.md'
+alias scripts='cd ~/.config/scripts && lla'
+alias m='mvim'
+alias mr='mvim -r'
+alias rmt='rmtrash'
+
+## mvim mappings
+# alias v='mvim -u ~/.vimrc'
+alias mcm='open -a MacVim'  # if the file is aleady open in MacVim, this will jump to it
+alias vim='echo "did you mean mvim?";read -rsp $"Press any key to continue..." -n1 key;vim'
+alias vt='mvim -u ~/.vimrc --remote-tab'  # http://apple.stackexchange.com/questions/105603/mvim-macvim-7-4-opening-new-windows-rather-than-tabs-mac-os-x-10-8-5
+alias vs='mvim -S'
+alias vr='mvim -r'
+
+
+## reminder mappings - can delete anytime
+alias rm='echo "remember rmt (rmtrash) as an alternative to using rm" && rm'
