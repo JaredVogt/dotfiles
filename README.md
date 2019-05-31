@@ -28,5 +28,4 @@ Install the dotfiles with Git:
 * [powerline](https://powerline.readthedocs.io/en/latest/installation/osx.html). This is a complicated one... read this to make sure things done correctly. Will be scripting this one up. [Font zip file](https://github.com/powerline/fonts/archive/master.zip)
 * Inspired by Lars Karpert's [article](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789#.i2u62yg9w).
 * see `dotfile/macos/apps/README.md` for details on mackup!
-* `caps lock` is mapped to F19 with Karabiner. To get `shift + del` to delete a word backwards, make sure that the KM macro group `App - iterm/vim Macros` is installed. 
-* `caps lock` is mapped to F19 with Karabiner. To get `shift + del` to delete a word backwards, make sure that the KM macro group `App - iterm/vim Macros` is installed. 
+* `caps lock` is mapped to F19 with Karabiner. To get `shift + del` to delete a word backwards, make sure that the KM macro group `App - iterm/vim Macros` is installed.  
