@@ -29,8 +29,7 @@ export LSCOLORS=ExFxBxDxCxegBdabagacad
 if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
   source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 fi
-#  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh # see https://github.com/JaredVogt/dotfiles/issues/15
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWCOLORHINTS=1
