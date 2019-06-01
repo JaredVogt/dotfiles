@@ -4,3 +4,4 @@
 if [ -f ~/dotfiles/runcom/myBashProfile ]; then
    source ~/dotfiles/runcom/myBashProfile
 fi
+

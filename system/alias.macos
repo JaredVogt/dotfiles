@@ -14,6 +14,13 @@ alias m='mvim'
 alias mr='mvim -r'
 alias rmt='rmtrash'
 
+# iterm profile aliases
+# FIXME: the following should be pulled out into a function
+alias rprof='title C02; profile Default'  # profile is in system/function
+alias jssh='title OldMachine; clear; profile JRVProfile; ssh jaredvogt@192.168.1.26; clear; title C02; profile Default'  # https://coderwall.com/p/0q1v-w/change-iterm2-profile-from-the-terminal
+alias mssh='title Music; profile MusicProfile; clear; ssh jaredvogt@192.168.1.3; clear; title C02; profile Default'  
+# alias mssh='echo -e "\033]50;SetProfile=MusicProfile\x7" && ssh jaredvogt@192.168.1.3 && rprof'
+
 ## mvim mappings
 # alias v='mvim -u ~/.vimrc'
 alias mcm='open -a MacVim'  # if the file is aleady open in MacVim, this will jump to it

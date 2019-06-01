@@ -10,7 +10,6 @@ alias lla='ls -alhF'
 ## my custom functions
 source $HOME/dotfiles/system/function
 source $HOME/dotfiles/system/function.macos
-source $HOME/dotfiles/system/function.apparix
 
 ## history settings
 export HISTSIZE=100000
@@ -30,7 +29,8 @@ export LSCOLORS=ExFxBxDxCxegBdabagacad
 if [ -f /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash ]; then
   source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-completion.bash
 fi
-source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+#  source /Applications/Xcode.app/Contents/Developer/usr/share/git-core/git-prompt.sh
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWUPSTREAM="auto"
 export GIT_PS1_SHOWCOLORHINTS=1
@@ -62,6 +62,13 @@ export PATH="$HOME/bin:$PATH"  # all custom scripts live in this folder [depreca
 
 # some envs
 source $HOME/dotfiles/system/env.macos
+
+# iterm2 shell integration
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+# apparish
+source $HOME/.bourne-apparish
+
 
 ## Tips and Tricks
 # http://natelandau.com/my-mac-osx-bash_profile/

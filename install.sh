@@ -20,6 +20,7 @@ function compareFiles {
 declare -a files=(
 ~/dotfiles/runcom/.bash_profile
 ~/dotfiles/runcom/.inputrc
+~/dotfiles/runcom/.bourne-apparish
 ~/dotfiles/git/.gitconfig
 ~/dotfiles/zsh/.zshrc
 )

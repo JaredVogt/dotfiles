@@ -12,3 +12,14 @@ seattle() {
   local CITY=${1:-Seattle}
   curl -4 "wttr.in/$CITY"
 }
+
+# utility functions for iterm
+# set window title
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
+
+# set profile
+function profile {
+    echo -e "\033]50;SetProfile="$*"\x7"
+}

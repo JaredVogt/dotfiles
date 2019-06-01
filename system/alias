@@ -35,6 +35,7 @@ alias rmr='rm -iR'
 # alias vim='/usr/local/bin/vim -u ~/.vimrc'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
+alias bml='apparish'  # already aliased to a?
 
 
 ## shortcuts to edit specific dotfiles
