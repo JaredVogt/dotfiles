@@ -11,11 +11,14 @@ alias lla='ls -alhF'
 source $HOME/dotfiles/system/function
 source $HOME/dotfiles/system/function.macos
 
-## history settings
+## history settings (https://www.shellhacks.com/tune-command-line-history-bash/)
 export HISTSIZE=100000
 export HISTFILESIZE=999999
 shopt -s histappend  # add commands from all shells
-HISTCONTROL=ignoreboth  # ignore space and duplicates
+export HISTCONTROL=ignoreboth:erasedups  # ignore space and duplicates
+source $HOME/dotfiles/runcom/.histIgnore.sh
+export HISTIGNORE="$fileString"  # an alternative would be to create a clean history script that scrapes all lines that match.
+export HISTTIMEFORMAT="%h %d %H:%M:%S "
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"  # NOTE: http://askubuntu.com/questions/67283/is-it-possible-to-make-writing-to-bash-history-immediate
 
 # source $HOME/dotfiles/.inputrc  # this isn't working - so need to have .inputrc in home
