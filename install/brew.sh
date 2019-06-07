@@ -45,14 +45,14 @@ ffmpeg
 # gifsicle
 # git
 git-extras
-gnu-sed --with-default-names
-grep --with-default-names
+# gnu-sed --with-default-names
+# grep --with-default-names
 hub
 httpie
 imagemagick
 # peco
 psgrep
-shellcheck
+# shellcheck
 # ssh-copy-id  # I think this is now intalled by default
 tree
 wifi-password
