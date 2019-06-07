@@ -28,18 +28,20 @@ perl
 python
 rmtrash
 ruby
+node
 vim
 wget
-zsh
-zsh-completions
+readline
+coffeescript
+# zsh
+# zsh-completions
 ## suggested
-bash-completion2
-# bats
+bats
 # battery
 coreutils
 dockutil
 ffmpeg
-fasd
+# fasd
 # gifsicle
 # git
 git-extras
@@ -48,10 +50,10 @@ grep --with-default-names
 hub
 httpie
 imagemagick
-peco
+# peco
 psgrep
 shellcheck
-ssh-copy-id
+# ssh-copy-id  # I think this is now intalled by default
 tree
 wifi-password
 )

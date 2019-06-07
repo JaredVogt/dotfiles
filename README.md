@@ -7,20 +7,17 @@
 
 On a sparkling fresh installation of macOS:
 
-    `sudo softwareupdate -i -a`  # update all software
-    `xcode-select --install`  # install command line tools
+1. `sudo softwareupdate -i -a`  # update all software
+2. `xcode-select --install`  # install command line tools
 
 Install the dotfiles with Git:
 
 ### Clone with Git
 
-    git clone https://github.com/jaredvogt/dotfiles.git ~/dotfiles
-    source ~/dotfiles/install.sh
-    ~/dotfiles/install/bash.sh  # this installs the latest shell via brew and updates all appropriate stuff
-    `brew.sh`  # this installs brew first - and then all the brew apps
-
-    install.sh needs to be updated for my install - at this point its pretty barebones.
-
+3. `git clone https://github.com/jaredvogt/dotfiles.git ~/dotfiles`
+4. `source ~/dotfiles/install.sh`
+5. `brew.sh`  # this installs brew first - and then all the brew apps
+6. `~/dotfiles/install/bash.sh  # this installs the latest shell via brew and updates all appropriate stuff`
 
 ### Random Notes
 

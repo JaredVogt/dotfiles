@@ -36,6 +36,7 @@ alias rmr='rm -iR'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
 alias bml='apparish'  # already aliased to a?
+alias tf='tail -n 20 -f'
 
 
 ## shortcuts to edit specific dotfiles

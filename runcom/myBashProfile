@@ -65,6 +65,10 @@ source $HOME/dotfiles/system/env.macos
 # iterm2 shell integration
 test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
 
+# z directory caching
+. /usr/local/Cellar/z/1.9/etc/profile.d/z.sh
+  
+
 # apparish
 source $HOME/.bourne-apparish
 

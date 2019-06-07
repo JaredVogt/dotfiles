@@ -24,8 +24,8 @@ declare -a files=(
 ~/dotfiles/runcom/myBashProfile
 ~/dotfiles/install.sh
 ~/dotfiles/macos/scripts.sh
-~/dotfiles/macos/scripts.sh
 ~/vimrc/linkFiles.sh
+/etc/hosts
 )
 for file in "${files[@]}"
   do ln -sfv "$file" $SYMLINKDIR/.
