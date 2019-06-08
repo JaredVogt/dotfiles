@@ -28,6 +28,9 @@ mas_info
 mas_search
 mas
 # my aliases and functions
+proj
+ag
+hg
 sbp
 jssh
 mssh
