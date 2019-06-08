@@ -1,8 +1,3 @@
-# dotfiles
-
-`git clone https://github.com/webpro/dotfiles.git`
-`cd dotfiles`
-
 ## Install
 
 On a sparkling fresh installation of macOS:
@@ -31,3 +26,13 @@ Install the dotfiles with Git:
 * Inspired by Lars Karpert's [article](https://medium.com/@webprolific/getting-started-with-dotfiles-43c3602fd789#.i2u62yg9w).
 * see `dotfile/macos/apps/README.md` for details on mackup!
 * On my mac, `caps lock` is mapped to F19 with Karabiner. To get `shift + del` to delete a word backwards, make sure that the Keyboard Maestro macro group `App - iterm/vim Macros` is installed.  
+
+#### NOTE: This is based on [webpro's dotfile repo](https://github.com/webpro/dotfiles.git)
+
+`git clone https://github.com/webpro/dotfiles.git`
+`cd dotfiles`
+
+There is much to be gleaned from copying this repo!
+
+
+
