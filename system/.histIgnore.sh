@@ -10,6 +10,8 @@ history
 cd
 cd*
 exit
+env
+printenv
 alias
 pwd
 node
@@ -39,6 +41,7 @@ h
 lla
 a
 z
+sizes
 back
 )
 

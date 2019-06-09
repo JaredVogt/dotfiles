@@ -22,7 +22,7 @@ declare -a files=(
 ~/dotfiles/system/function.extra
 ~/dotfiles/system/function.macos
 ~/dotfiles/runcom/myBashProfile
-~/dotfiles/runcom/.histIgnore.sh
+~/dotfiles/system/.histIgnore.sh
 ~/dotfiles/install.sh
 ~/dotfiles/macos/scripts.sh
 ~/vimrc/linkFiles.sh

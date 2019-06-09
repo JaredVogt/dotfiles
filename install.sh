@@ -20,9 +20,11 @@ function compareFiles {
 declare -a files=(
 ~/dotfiles/runcom/.bash_profile
 ~/dotfiles/runcom/.inputrc
-~/dotfiles/runcom/.bourne-apparish
 ~/dotfiles/git/.gitconfig
 ~/dotfiles/zsh/.zshrc
+~/dotfiles/system/.bourne-apparish
+~/dotfiles/system/.histIgnore.sh
+~/dotfiles/system/.gitignore
 )
 
 for file in "${files[@]}" 

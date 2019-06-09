@@ -1,0 +1,25 @@
+# The Silver Search .ignore file
+Library/Application Support/MobileSync/
+Library/Application Support/CallHistoryTransactions/
+Library/Application Support/com.apple.TCC/
+Library/Application Support/CallHistoryDB/
+Library/IdentityServices/
+Library/Messages/
+Library/Mail/
+Library/Safari/
+Library/Suggestions/
+Library/Containers/com.apple.VoiceMemos/
+Library/Containers/com.apple.Home/
+Library/Containers/com.apple.Safari/
+Library/Containers/com.apple.iChat/
+Library/Containers/com.apple.mail/
+Library/Containers/com.apple.news/
+Library/Containers/com.apple.stocks/
+Library/PersonalizationPortrait/
+Library/Metadata/CoreSpotlight/
+Library/Metadata/com.apple.IntelligentSuggestions/
+Library/Cookies/
+Library/Caches/CloudKit/com.apple.Safari/
+
+# candidates
+.git/objects/
