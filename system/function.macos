@@ -1,10 +1,10 @@
 # open a man page in preview
-manpdf(){  
+manpdf(){ 
   man -t $1 | open -f -a preview
 }
 
 # pop a markdown file in browser
-popmd(){  
+popmd(){
   file='README.md'
   # TODO: assign README.md as default - so if not arguement given, then popmd should open README.md that is in current directory.
   # Or alternatively, if no argument is given, pop a list of *.md files in current directory for quick selection.
@@ -16,15 +16,3 @@ popmd(){
 ft(){
 find ~ -type f -mtime 0 -iname "*.$1"
 }
-
-# Grab a command from the history list to the clipboard TODO:
-yank(){
-  last=$(echo `history | tail -n2 | head -n1` | awk -F " " '{print $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21}' | sed 's/^#//')
-  $(echo $last | pbcopy)
- }
-
-## Better yank that allows you to select a history line - if nothing selected, defaults to last command
- yank2(){
-  last=$(echo `history | tail -n2 | head -n1` | awk -F " " '{print $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21}' | sed 's/^#//')
-  $(echo $last | pbcopy)
- }
