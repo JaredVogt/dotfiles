@@ -3,3 +3,4 @@
 	email = jared.vogt@gmail.com
 [core]
 	editor = vim
+	excludesfile = /Users/jaredvogt/.gitignore_global

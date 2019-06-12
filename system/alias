@@ -11,6 +11,7 @@ shopt -s expand_aliases  # expand aliases in non-ineractive shells
 
 ##  generic aliases
 alias h=history
+alias hh='history 10'  # print out 10 lines
 # alias ns='bash --init-file $HOME/.bash_profile_ns'  # FIXME: this file doesn't even exist
 alias cdl='cd --'
 alias cp='cp -i'
@@ -37,7 +38,8 @@ alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias myip=''dig' +short "myip.opendns.com" "@resolver1.opendns.com" | pbcopy'
 alias bml='apparish'  # already aliased to a?
 alias tf='tail -n 20 -f'
-
+# alias y='echo !! | pbcopy'  # FIXME: trying to figure out how to copy into the system clipboard
+alias y='~/projects/utilities/yank.js'
 
 ## shortcuts to edit specific dotfiles
 alias vimrc='mcm ~/.vimrc'

@@ -49,5 +49,5 @@ back
 # mergedFiles=${files// /:}
 # fileString=${mergedFiles//_/ }
 
-fileString=$(IFS=':';echo "${commands[*]}";IFS=$' \t\n')  # https://stackoverflow.com/questions/13470413/converting-a-bash-array-into-a-delimited-string 
+histIgnore=$(IFS=':';echo "${commands[*]}";IFS=$' \t\n')  # https://stackoverflow.com/questions/13470413/converting-a-bash-array-into-a-delimited-string 
 # echo "$fileString"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# This is the file that creates ~/.config/symlinks
+# This is the file that creates ~/.config/symlinks which is popped in vim for easy access to various files
 SYMLINKDIR=~/.config/symlinks/
 READMES=~/.config/symlinks/README/
 SNIPPETS=~/.config/symlinks/snippets/
@@ -23,6 +23,8 @@ declare -a files=(
 ~/dotfiles/system/function.macos
 ~/dotfiles/runcom/myBashProfile
 ~/dotfiles/system/.histIgnore.sh
+~/dotfiles/system/.gitignore
+~/dotfiles/git/.gitignore_global
 ~/dotfiles/install.sh
 ~/dotfiles/macos/scripts.sh
 ~/vimrc/linkFiles.sh

@@ -15,16 +15,17 @@ source $HOME/dotfiles/system/function.macos
 export HISTSIZE=100000
 export HISTFILESIZE=999999
 shopt -s histappend  # add commands from all shells
+shopt -s histverify
 export HISTCONTROL=ignoreboth:erasedups  # ignore space and duplicates
 source $HOME/.histIgnore.sh
-export HISTIGNORE="$fileString"  # an alternative would be to create a clean history script that scrapes all lines that match.
+export HISTIGNORE="$histIgnore"  # histIgnore is defined in ~./.histIgnore.sh 
 export HISTTIMEFORMAT="%h %d %H:%M:%S "
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"  # NOTE: http://askubuntu.com/questions/67283/is-it-possible-to-make-writing-to-bash-history-immediate
 
 # source $HOME/dotfiles/.inputrc  # this isn't working - so need to have .inputrc in home
 
 export EDITOR=mvim
-export BROWSER=/Applications/Google\ Chrome.app
+export BROWSER=/Applications/Firefox.app
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegBdabagacad
 

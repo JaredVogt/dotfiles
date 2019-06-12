@@ -25,6 +25,7 @@ declare -a files=(
 ~/dotfiles/system/.bourne-apparish
 ~/dotfiles/system/.histIgnore.sh
 ~/dotfiles/system/.gitignore
+~/dotfiles/git/.gitignore_global
 )
 
 for file in "${files[@]}" 
