@@ -3,23 +3,23 @@
 ########################################################
 
 alias sym='cd ~/.config/symlinks && lla'
-alias dots='cd ~/.config/symlinks && mvim .'
-alias snips='cd ~/.vim/mySnips && mvim .'
+alias dots='mvim ~/.config/symlinks/.'
+alias snips='mvim ~/.vim/mySnips/.'
 alias dot='cd ~/dotfiles && lla'
 alias proj='cd ~/projects && lla'
-alias config='~/projects/utilities/config2evernote.py'
+# alias config='~/projects/utilities/config2evernote.py'
 alias hm='popmd $PROJECT_HOME/utilities/helpme.md'
 alias scripts='cd ~/.config/scripts && lla'
 alias m='mvim'
 alias mr='mvim -r'
 alias rmt='rmtrash'
+alias vli='title "C02_info.log (ctrl+c to release, ctrl+z to put in background, F to tail)"; less +F ~/Dropbox/logs/C02_info.log; title C02'
+alias vld='title "C02_debug.log (ctrl+c to release, ctrl+z to put in background, F to tail)"; less +F ~/Dropbox/logs/C02_debug.log; title C02'
 
 # iterm profile aliases
-# FIXME: the following should be pulled out into a function
 alias rprof='title C02; profile Default'  # profile is in system/function
 alias jssh='title OldMachine; clear; profile JRVProfile; ssh jaredvogt@16ts; clear; title C02; profile Default'  # https://coderwall.com/p/0q1v-w/change-iterm2-profile-from-the-terminal
 alias mssh='title Music; profile MusicProfile; clear; ssh jaredvogt@MacMini; clear; title C02; profile Default'  
-# alias mssh='echo -e "\033]50;SetProfile=MusicProfile\x7" && ssh jaredvogt@192.168.1.3 && rprof'
 
 ## mvim mappings
 # alias v='mvim -u ~/.vimrc'
@@ -28,6 +28,13 @@ alias vim='echo "did you mean mvim?";read -rsp $"Press any key to continue..." -
 alias vt='mvim -u ~/.vimrc --remote-tab'  # http://apple.stackexchange.com/questions/105603/mvim-macvim-7-4-opening-new-windows-rather-than-tabs-mac-os-x-10-8-5
 alias vs='mvim -S'
 alias vr='mvim -r'
+
+## brew mappings
+alias bci='brew cask install'
+alias bi='brew install'
+alias bs='brew search'
+alias bn='brew info'
+alias bin='brew info'
 
 
 ## reminder mappings - can delete anytime

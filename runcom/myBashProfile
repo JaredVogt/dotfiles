@@ -61,6 +61,7 @@ bind '"\t":menu-complete'  # tab cycles around options
 export PATH="/usr/local/bin:$PATH"
 export PATH="/usr/local:$PATH"
 export PATH="$HOME/dotfiles/macos/scripts:$PATH"  # all custom scripts live in this folder [deprecate?]
+export PATH="$HOME/projects/utilities:$PATH"  # misc utility scripts
 export PATH="$HOME/bin:$PATH"  # all custom scripts live in this folder [deprecate?]
 
 # some envs

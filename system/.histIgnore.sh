@@ -38,11 +38,13 @@ jssh
 mssh
 gits
 h
+hh
 lla
 a
 z
 sizes
 back
+title*
 )
 
 # files="${commands[@]}"

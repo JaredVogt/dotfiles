@@ -27,6 +27,7 @@ declare -a files=(
 ~/dotfiles/git/.gitignore_global
 ~/dotfiles/install.sh
 ~/dotfiles/macos/scripts.sh
+~/dotfiles/macos/createSymlinks.sh
 ~/vimrc/linkFiles.sh
 /etc/hosts
 )
@@ -48,6 +49,7 @@ ln -sf ~/projects/utilities/helpme.md $READMES/helpme.README.md
 # snippet files to quickly access
 mkdir -p $SNIPPETS
 ln -sf ~/.vim/mySnips/jareds-coffee.snippets $SNIPPETS/jareds-coffee.snippets
+ln -sf ~/.vim/mySnips/jareds-coffee.snippets $SNIPPETS/jareds-javascript.snippets
 ln -sf ~/.vim/mySnips/jareds-shell.snippets $SNIPPETS/jareds-shell.snippets
 ln -sf ~/.vim/mySnips/more-shell.snippets $SNIPPETS/more-shell.snippets
 
