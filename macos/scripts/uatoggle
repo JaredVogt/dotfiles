@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "This toggles UA audio apps. Additional steps could be taken if the machine is not in audio mode."
+
+killall "UA Mixer Engine"  # This kills Console if it is open as well.
+# echo "$?"
+if [[ "$?" == "1" ]]
+then 
+  open -a "/Library/Application Support/Universal Audio/Apollo/UA Mixer Engine.app"
+  open -a "/Applications/Universal Audio/Console.app/Contents/MacOS/Console"
+fi
+

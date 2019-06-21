@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "This turns off all extraneous applications."
+
+killall firefox
+killall Safari
+killall Mailplane
+killall "Path Finder"
+
+
