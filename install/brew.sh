@@ -28,7 +28,7 @@ rmtrash
 ruby
 git
 
-# some extra stuff
+## some extra stuff
 apparix
 handbrake
 htop
