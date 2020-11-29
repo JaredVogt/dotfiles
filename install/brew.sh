@@ -2,7 +2,7 @@
 # `brew leaves` to list out installed brew packages (not dependencies)
 # http://apple.stackexchange.com/questions/101090/list-of-all-packages-installed-using-homebrew
 
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew tap homebrew/versions
 brew tap homebrew/dupes
 brew tap Goles/battery
