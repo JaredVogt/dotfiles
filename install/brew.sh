@@ -10,26 +10,31 @@ brew upgrade
 
 coreApps=(
 ## mine
-apparix
 coffeescript
 diff-so-fancy
 bash-completion@2
+neovim
+perl
+python
+node
+vim
+mvim
+wget
+readline
+coffeescript
+mackup
+mas
+rmtrash
+ruby
+git
+
+# some extra stuff
+apparix
 handbrake
 htop
 jrnl
 jq
-mackup
-mas
-neovim
-perl
-python
-rmtrash
-ruby
-node
-vim
-wget
-readline
-coffeescript
+
 # zsh
 # zsh-completions
 ## suggested
