@@ -3,15 +3,12 @@
 # http://apple.stackexchange.com/questions/101090/list-of-all-packages-installed-using-homebrew
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-brew tap homebrew/versions
-brew tap homebrew/dupes
-brew tap Goles/battery
 brew update
 brew upgrade
 
 # Install packages
 
-apps=(
+coreApps=(
 ## mine
 apparix
 coffeescript
@@ -23,7 +20,7 @@ jrnl
 jq
 mackup
 mas
-neovim/neovim/neovim
+neovim
 perl
 python
 rmtrash
@@ -58,4 +55,9 @@ tree
 wifi-password
 )
 
-brew install "${apps[@]}"
+brew install "${coreApps[@]}"
+
+# additional taps
+# brew tap homebrew/versions
+# brew tap homebrew/dupes
+# brew tap Goles/battery
